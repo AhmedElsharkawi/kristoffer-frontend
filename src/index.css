@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: rgba(255, 255, 255,80%);
+  background: linear-gradient(to bottom, #000102, #0f3b82);
+  /* font-family: "Fira Sans", sans-serif; */
+  
+
+}
+
+.logo{
+  font-family: "Rancho", cursive;
+  font-weight: 400;
+  font-style: normal;}
+
+button:hover{
+  scale: 1.05;
+  transition: all;
+  transition:  0.9s ease-in-out;
+}
+a:hover{
+  scale: 1.05;
+  transition: all;
+  transition:  0.9s ease-in-out;
+}
+
+  
+
