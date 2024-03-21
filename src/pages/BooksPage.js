@@ -10,18 +10,22 @@ const BooksPage = () => {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // State for search query
   const [filteredBooks, setFilteredBooks] = useState([]); // State for filtered books
+  const [loading, setLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/books");
+        const res = await axios.get(`${process.env.REACT_APP_DOMAIN_URL}/books`);
         setBooks(res.data);
         setFilteredBooks(res.data); // Initialize filteredBooks with all books
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         setError("Error fetching data. Please try again later.");
         console.error("Error fetching data:", error.message);
+        setLoading(false); // Set loading to false if an error occurs
       }
     };
+  
     fetchData();
     window.scrollTo(0, 0);
   }, []);
@@ -64,12 +68,24 @@ const BooksPage = () => {
         />
       </div>
 
+      {/* Conditional rendering of loading spinner */}
+      {loading && (
+        <div className="flex justify-center items-center mt-8">
+          {/* Tailwind CSS spinner */}
+          <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-yellow-500"></div>
+        </div>
+      )}
+
+      {/* Error message rendering */}
+      {error && (
+        <p className="text-red-500 text-center mt-8">{error}</p>
+      )}
 
       <div className="mt-11 px-4 grid justify-center sm:px-[100px] sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {currentBooks.map((book) => (
           <div className="w-[200px] border border-slate-500 rounded-md p-3 flex flex-col justify-center items-center hover:shadow-purple-400 hover:shadow-md mb-5 transition-all duration-700 ease-in-out" key={book._id}>
             <div className='flex flex-col justify-center items-center '>
-              <img src={`http://localhost:8000/${book.image}`} alt={book.title} className="w-[150px] h-[180px] rounded-md" />
+              <img src={`${process.env.REACT_APP_DOMAIN_URL}/${book.image}`} alt={book.title} className="w-[150px] h-[180px] rounded-md" />
               <h3 className="text-center mt-1 font-semibold text-md ">
                 {book.title}
               </h3>
@@ -78,8 +94,7 @@ const BooksPage = () => {
               </p>
             </div>
             <div className=" mt-3">
-              <Link to={`/books/${book._id}`} className='border  text-md font-semibold
-               bg-gradient-to-r from-yellow-600 to-indigo-600  py-1 px-3 rounded-md text-center '>see more...</Link>
+              <Link to={`/books/${book._id}`} className='border  text-md font-semibold bg-gradient-to-r from-yellow-600 to-indigo-600  py-1 px-3 rounded-md text-center '>see more...</Link>
             </div>
           </div>
         ))}

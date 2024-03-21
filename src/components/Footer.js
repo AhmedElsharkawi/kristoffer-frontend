@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <div className='w-full mt-[40px]  sm:px-[100px] mb-3  px-4 '>
-      <div className='flex flex-col gap-5 sm:flex-row sm:justify-between sm:gap-8 sm:items-center flex-wrap'>
+      <div className='flex flex-col gap-5  sm:flex-row sm:justify-between sm:gap-8 sm:items-center flex-wrap'>
         <div>
           <h2 className='mb-1'>NewsLetters</h2>
           <div className='flex items-center gap-4 '>

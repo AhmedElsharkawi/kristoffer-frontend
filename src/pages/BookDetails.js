@@ -6,20 +6,39 @@ import { FaBookReader } from "react-icons/fa";
 
 const BookDetails = () => {
   const [bookDetails, setBookDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/books/get/${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_DOMAIN_URL}/books/get/${id}`);
         setBookDetails(res.data);
+        setLoading(false);
       } catch (error) {
-        console.log(error);
+        setError("Error fetching book details. Please try again later.");
+        console.error("Error fetching book details:", error.message);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, [id]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center mt-8">
+        {/* Tailwind CSS spinner */}
+        <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-yellow-500"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return  <p className="text-red-500 text-center mt-8">{error}</p>
+    }
+  
 
   return (
     <>
@@ -29,7 +48,7 @@ const BookDetails = () => {
            border-slate-500 border rounded-md ">
           {bookDetails.image && (
             <img
-              src={`http://localhost:8000/${bookDetails.image}`}
+              src={`${process.env.REACT_APP_DOMAIN_URL}/${bookDetails.image}`}
               alt={bookDetails.title}
               className=" object-cover rounded-md md:w-full  h-auto w-[180px] 
                relative right-[5px] bottom-2 shadow-md shadow-yellow-100 "
