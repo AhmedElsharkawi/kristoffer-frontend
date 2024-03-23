@@ -94,7 +94,7 @@ const BooksPage = () => {
               </p>
             </div>
             <div className=" mt-3">
-              <Link to={`/books/${book._id}`} className='border  text-md font-semibold bg-gradient-to-r from-yellow-600 to-indigo-600  py-1 px-3 rounded-md text-center '>see more...</Link>
+              <Link to={`/books/${book._id}`} className='border  text-md font-semibold bg-gradient-to-r from-yellow-100 to-cyan-100 text-indigo-800  rounded-md flex justify-center items-center px-1  '>see more...</Link>
             </div>
           </div>
         ))}

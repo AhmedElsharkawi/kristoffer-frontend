@@ -14,14 +14,15 @@ const LibraryVisit = () => {
               a successful visit. Here will share some tips on how to have an awesome author visit even
                if you have a small library budget.</p>
                <div className='justify-center flex mt-11'>
-                    <Link to='/contact' className='w-[120px] h-[40px] py-2 px-2 rounded-3xl text-center font-semibold opacity-80 hover:opacity-100 hover:scale-105
-                    bg-gradient-to-r from-yellow-600 to-indigo-600'>
+                    <Link to='/contact' className='w-[120px] h-[40px] flex items-center justify-center px-2 rounded-3xl text-center font-semibold opacity-80 hover:opacity-100 hover:scale-105
+                    bg-gradient-to-r from-yellow-100 to-cyan-100 text-indigo-800'>
                         BOOK A VISIT
                         </Link>
                 
             </div>  
         </div>
-        <hr className='mt-[30px] opacity-60'/>
+        <hr className="w-[50%] mx-auto mt-[30px] opacity-60" />
+
 </div>
     )
 }

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import BookDetails from "./pages/BookDetails";
 import ScrollToTop from "./components/ScrollTopUp";
 import Contact from "./pages/Contact";
+import LecturePage from "./pages/LecturePage";
 function App() {
 
 
@@ -30,6 +31,7 @@ function App() {
     <Route path='/contact' element={<Contact  />}  />
     <Route path='/books/:id' element={<BookDetails  />}  />
     <Route path='/books' element={<BooksPage />}  />
+    <Route path='/lecture/:id' element={<LecturePage />}  />
     
       </Routes>
       <Footer/>

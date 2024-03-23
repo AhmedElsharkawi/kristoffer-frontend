@@ -57,7 +57,8 @@ const Mybooks = () => {
         })}
       </div>
       <div className="justify-center flex mt-11">
-        <Link to="/books" className="w-[120px] h-[40px] py-2 px-2 rounded-3xl text-center font-semibold opacity-80 hover:opacity-100 hover:scale-105 bg-gradient-to-r from-yellow-600 to-indigo-600">
+        <Link to="/books" className="w-[120px] h-[40px] flex items-center justify-center px-2 rounded-3xl text-center font-semibold opacity-80 hover:opacity-100 hover:scale-105 
+        bg-gradient-to-r from-yellow-100 to-cyan-100 text-indigo-800">
           SHOW ALL
         </Link>
       </div>  

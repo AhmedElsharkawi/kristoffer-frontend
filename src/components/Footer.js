@@ -56,8 +56,9 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className='text-[9px] text-center mt-14'>
-        Copyright © 2024 by A.Sharkawi
+      <div  className='text-[9px] text-center mt-14'>
+        <a href='https://portfolio-2023-khaki-iota.vercel.app' target='_blank' rel='noreferrer' >Copyright © 2024 by A.Sharkawi</a>
+        
       </div>
     </div>
   );

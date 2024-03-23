@@ -2,6 +2,7 @@
 import About from './About'
 import Mybooks from './Mybooks'
 import LibraryVisit from '../components/LibraryVisit'
+import Lectures from '../components/Lectures'
 
 const Home = ({books}) => {
 
@@ -13,6 +14,7 @@ const Home = ({books}) => {
         <About />
         <Mybooks  />
         <LibraryVisit />
+        <Lectures />
         
     </div>
     )

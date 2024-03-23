@@ -67,7 +67,7 @@ const BookDetails = () => {
                   target="_blank"
                   className="  w-[100px] h-7 rounded-md text-center 
                text-md font-semibold 
-               bg-gradient-to-r from-yellow-600 to-indigo-600 text-white hover:scale-[1.1] transition-all ease-in-out duration-200 "
+               bg-gradient-to-r from-yellow-100 to-cyan-100 text-indigo-800 hover:scale-[1.1] transition-all ease-in-out duration-200 "
                 >
                   Buy
                 </a>
