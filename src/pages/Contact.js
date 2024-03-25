@@ -32,7 +32,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('Error sending message:', error);
-      setError('Error sending message. Please try again.');
+      setError(error.response.data);
     } finally {
       // Enable the button after form submission (whether successful or not)
       setSubmitted(false);
@@ -48,7 +48,7 @@ const Contact = () => {
       <form onSubmit={handleSubmit} className='flex text-xl tracking-widest flex-col gap-7 md:gap-10 px-4 mt-7 sm:px-[100px] md:absolute md:top-10 md:w-full lg:w-[80%]' data-aos="fade-right">
         <input type='text' placeholder='Name' name='name' value={formData.name} onChange={handleChange} className='p-2 rounded-sm outline-none bg-transparent border-b-2  text-xl tracking-widest focus:bg-white focus:text-indigo-800'  required/>
         <input type='email' placeholder='Email Address' name='email' value={formData.email} onChange={handleChange} className='p-2 rounded-sm outline-none bg-transparent border-b-2  text-xl tracking-widest focus:bg-white focus:text-indigo-800'  required/>
-        <input type='text' placeholder='Subject' name='subject' value={formData.subject} onChange={handleChange} className='p-2 rounded-sm outline-none bg-transparent border-b-2  text-xl tracking-widest focus:bg-white focus:text-indigo-800' required />
+        <input type='text' placeholder='Subject' name='subject' value={formData.subject} onChange={handleChange} className='p-2 rounded-sm outline-none bg-transparent border-b-2  text-xl tracking-widest focus:bg-white focus:text-indigo-800'  />
         <textarea placeholder='Message' name='message' value={formData.message} onChange={handleChange} className=' text-xl tracking-widest bg-transparent border rounded-md outline-none p-2 mt-5 md:h-[200px] focus:bg-white focus:text-indigo-800' required />
         {error && <p className="text-red-500">{error}</p>} {/* Display error message if error state is not null */}
         <button type='submit' disabled={submitted} className={`text-center mt-5 border p-2 text-xl font-semibold rounded-md w-[150px] text-slate-300 bg-indigo-900 hover:bg-white hover:border-none hover:text-indigo-800 ${submitted ? 'opacity-50 cursor-not-allowed' : ''}`}>Submit</button>
