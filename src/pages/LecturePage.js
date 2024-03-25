@@ -23,8 +23,8 @@ const LecturePage = () => {
   <div>
      <div className='w-full min-h-svh' >
        <div className='p-10 sm:w-[70%] sm:mx-auto' data-aos="fade-up" >
-           <h1 className='text-center font-semibold text-2xl  mb-6'data-aos="fade-left"  >{lectures.title}</h1>
-           <p className='sm:leading-10 sm:tracking-widest' data-aos="fade-right" >{lectures.description}</p>
+           <h1 className='text-center font-semibold text-2xl  mb-20'data-aos="fade-left"  >{lectures.title}</h1>
+           <p className='leading-10 tracking-widest ' data-aos="fade-right" >{lectures.description}</p>
        </div>
        
     

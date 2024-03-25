@@ -64,7 +64,7 @@ const BooksPage = () => {
           placeholder='Search by book title'
           value={searchQuery}
           onChange={handleSearchInputChange}
-          className='w-full text-white outline-none border-none bg-transparent'
+          className='w-full text-white outline-none border-none bg-transparent placeholder:text-xs sm:placeholder:text-sm'
         />
       </div>
 
@@ -94,7 +94,7 @@ const BooksPage = () => {
               </p>
             </div>
             <div className=" mt-3">
-              <Link to={`/books/${book._id}`} className='border  text-md font-semibold bg-gradient-to-r from-yellow-100 to-cyan-100 text-indigo-800  rounded-md flex justify-center items-center px-1  '>see more...</Link>
+              <Link to={`/books/${book._id}`} className='border  text-md font-semibold bg-gradient-to-t from-[#9db0ce] to-[#dbe0e8] text-slate-700 rounded-md flex justify-center items-center px-1 w-[100px] '>see more</Link>
             </div>
           </div>
         ))}

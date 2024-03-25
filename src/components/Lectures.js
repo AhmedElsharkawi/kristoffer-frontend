@@ -24,9 +24,9 @@ const Lectures = () => {
             <div className='flex flex-col gap-6' data-aos="fade-left">
                 {lectures.map((lecture)=>{
                     return ( <div className='test flex flex-col gap-4   shadow-2xl  py-2 px-2 rounded-md hover:scale-[1.01] transition-all duration-[700] ' key={lecture._id}>
-                        <h3 className='text-xl font-semibold'>{lecture.title}:</h3>
+                        <h3 className='text-xl font-semibold '>{lecture.title}:</h3>
                         <p className='truncate'>{lecture.description}</p>
-                        <Link to={`/lecture/${lecture._id}`} className='w-[150px] h-[30px] bg-gradient-to-r from-indigo-500 via-slate-400 to-yellow-100 text-indigo-800 font-semibold rounded-lg flex justify-center items-center mb-1'>continue reading</Link>
+                        <Link to={`/lecture/${lecture._id}`} className='w-[150px] h-[30px] bg-gradient-to-t from-[#9db0ce] to-[#dbe0e8] text-slate-700 font-semibold rounded-lg flex justify-center items-center mb-1'>continue reading</Link>
                              </div>)
                     
                 })}

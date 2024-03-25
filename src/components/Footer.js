@@ -32,8 +32,8 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className='w-[90px] h-[30px] py-2 px-2 border rounded-md flex justify-center items-center
-                     font-semibold hover:scale-105 text-white bg-gradient-to-r from-cyan-900 to-indigo-600'>
+              className='w-[70px] h-[30px] text-xs sm:w-[80px] sm:text-base py-2 px-2 border rounded-md flex justify-center items-center
+                     font-semibold hover:scale-[1.01] text-white bg-gradient-to-r from-cyan-900 to-indigo-600'>
               Subscribe
             </button>
           </div>
@@ -42,7 +42,6 @@ const Footer = () => {
 
         <div className='flex gap-7'>
           <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
           <Link to='/books'>Books</Link>
           <Link to='/contact'>Contact</Link>
         </div>

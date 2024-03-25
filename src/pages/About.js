@@ -35,7 +35,7 @@ const About = () => {
         <div className='my-6 flex flex-col md:flex-row gap-10 md:justify-between  md:items-center lg:items-start'>
             <div className=' md:w-[50%] lg:w-[70%]  '>
             {aboutsec.length > 0 && (
-                        <h2 className='mb-[120px] sm:text-md xl:text-lg leading-9 tracking-wider w-full text-justify' data-aos="fade-right">
+                        <h2 className='mb-[120px] sm:text-md xl:text-lg leading-9 tracking-widest xl:leading-10 w-full text-justify' data-aos="fade-right">
                             {aboutsec[0].desc}
                         </h2>
                     )}
