@@ -46,7 +46,7 @@ const Mybooks = () => {
             <div className="mb-8" data-aos="fade-right" key={book._id}>
               <Link to={`/books/${book._id}`} className="border border-white w-[180px] h-[230px] rounded-md relative flex flex-col">
                 <img
-                  src={`http://localhost:8000/${book.image}`}
+                  src={`${process.env.REACT_APP_DOMAIN_URL}/${book.image}`}
                   alt={book.title}
                   className="w-full h-full rounded-md absolute bottom-1 right-1 shadow-md shadow-yellow-100"
                 />
