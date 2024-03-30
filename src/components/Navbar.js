@@ -23,6 +23,7 @@ const Navbar = () => {
          <div className={`${openMenu ? 'flex' : 'hidden'} flex-col mt-3 gap-5 sm:flex-row sm:gap-6 sm:mt-0 md:gap-8 lg:gap-10` }   >
            <Link to='/'>Home</Link>
            <Link to='/books'>Books</Link>
+           <Link to='/visits'>Visits & Lectures</Link>
            
            <Link to='/contact'>Contact</Link>
          </div>

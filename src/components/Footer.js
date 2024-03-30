@@ -9,7 +9,7 @@ const Footer = () => {
 
   const handleSubscribe = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/subscribe', { email });
+      const response = await axios.post(`${process.env.REACT_APP_DOMAIN_URL}/subscribe`, { email });
       setMessage(response.data.message);
       setEmail(''); // Clear the email input field after successful subscription
     } catch (error) {

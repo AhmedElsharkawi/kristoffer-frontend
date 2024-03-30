@@ -19,7 +19,7 @@ const Lectures = () => {
     },[])
   return (
     <div>
-            <div className='w-full mt-[40px]  sm:px-[100px] px-4  ' data-aos="fade-up" >
+            <div className='w-full mt-[40px]  sm:px-[100px] px-4  ' data-aos="fade-right" >
             <h1 className='text-2xl tracking-widest font-bold text-center mb-10'>MY LECTURES</h1>
             <div className='flex flex-col gap-6' data-aos="fade-left">
                 {lectures.map((lecture)=>{
@@ -35,7 +35,6 @@ const Lectures = () => {
 
 
             </div>
-            <hr className='mt-[50px] opacity-60'/>
 
 
     </div>

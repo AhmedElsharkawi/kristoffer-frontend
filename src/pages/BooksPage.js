@@ -6,7 +6,7 @@ import { CgSearch } from "react-icons/cg";
 const BooksPage = () => {
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [booksPerPage] = useState(10); // Display 10 books per page
+  const [booksPerPage] = useState(20); // Display 10 books per page
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // State for search query
   const [filteredBooks, setFilteredBooks] = useState([]); // State for filtered books
@@ -37,7 +37,7 @@ const BooksPage = () => {
 
     // Filter books based on search query
     const filtered = books.filter((book) =>
-      book.title.toLowerCase().includes(query.toLowerCase())
+      book.title.toLowerCase().startsWith(query.toLowerCase())
     );
     setFilteredBooks(filtered); // Update filtered books state
     setCurrentPage(1); // Reset to first page when searching

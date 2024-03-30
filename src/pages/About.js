@@ -30,12 +30,11 @@ const About = () => {
     
 
   return (
-    <div className='w-full mt-[40px]  sm:px-[100px]  px-4  ' >
-        <h1 className='text-2xl tracking-widest font-semibold text-center mb-20 '>ABOUT</h1>
-        <div className='my-6 flex flex-col md:flex-row gap-10 md:justify-between  md:items-center lg:items-start'>
+    <div className='w-full pt-10 md:pt-36  sm:px-[100px]  px-4  ' >
+        <div className=' flex flex-col gap-6 sm:gap-36 md:gap-10 mb-10 md:flex-row  md:justify-between  md:items-center lg:items-start '>
             <div className=' md:w-[50%] lg:w-[70%]  '>
             {aboutsec.length > 0 && (
-                        <h2 className='mb-[120px] sm:text-md xl:text-lg leading-9 tracking-widest xl:leading-10 w-full text-justify' data-aos="fade-right">
+                        <h2 className=' sm:text-md md:tracking-wide lg:tracking-widest xl:text-lg leading-9 tracking-widest xl:leading-10 w-full text-justify' data-aos="fade-right">
                             {aboutsec[0].desc}
                         </h2>
                     )}

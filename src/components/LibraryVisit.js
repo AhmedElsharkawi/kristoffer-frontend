@@ -6,7 +6,7 @@ const LibraryVisit = () => {
 
 <div>
     <div className='w-full mt-[40px]  sm:px-[100px] px-4  ' data-aos="fade-up" >
-        <h1 className='text-2xl tracking-widest font-bold text-center mb-10'>LIBRARY VISITS</h1>
+        <h1 className='text-2xl tracking-widest font-bold text-center mb-10'>VISITS</h1>
         <p className='text-justify sm:text-md xl:text-lg leading-9 tracking-widest xl:leading-10'>An author visit is one of the most exciting events for students and staff. Not only does
              it create a buzz around the library, but it also encourages students to read, write and 
              explore the world of literature. However, planning and executing an author visit can be 

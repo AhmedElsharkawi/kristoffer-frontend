@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollTopUp";
 import Contact from "./pages/Contact";
 import LecturePage from "./pages/LecturePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Visits from "./pages/Visits";
 function App() {
 
 
@@ -33,6 +34,7 @@ function App() {
     <Route path='/books/:id' element={<BookDetails  />}  />
     <Route path='/books' element={<BooksPage />}  />
     <Route path='/lecture/:id' element={<LecturePage />}  />
+    <Route path='/visits' element={<Visits />}  />
     <Route path='*' element={<NotFoundPage />} />
 
     

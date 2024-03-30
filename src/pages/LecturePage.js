@@ -20,17 +20,15 @@ const LecturePage = () => {
     fetchData()
     },[id])
   return (
-  <div>
-     <div className='w-full min-h-svh' >
-       <div className='p-10 sm:w-[70%] sm:mx-auto' data-aos="fade-up" >
-           <h1 className='text-center font-semibold text-2xl  mb-20'data-aos="fade-left"  >{lectures.title}</h1>
-           <p className='leading-10 tracking-widest ' data-aos="fade-right" >{lectures.description}</p>
-       </div>
-       
-    
-     </div>
-     <hr className='mt-[30px] opacity-60'/>
-  </div>
+    <div>
+      <div className='w-full min-h-svh'>
+        <div className='p-10 sm:w-[70%] sm:mx-auto' data-aos="fade-up">
+          <h1 className='text-center font-semibold text-2xl mb-20' data-aos="fade-left">{lectures.title}</h1>
+          <p className='leading-10 tracking-widest whitespace-normal break-words' data-aos="fade-right">{lectures.description}</p>
+        </div>
+      </div>
+      <hr className='mt-[30px] opacity-60'/>
+    </div>
   )
 }
 
