@@ -48,7 +48,7 @@ const BookDetails = () => {
            border-slate-500 border rounded-md ">
           {bookDetails.image && (
             <img
-              src={`${process.env.REACT_APP_DOMAIN_URL}/${bookDetails.image}`}
+              src={`${process.env.REACT_APP_IMAGE_URL}/${bookDetails.image}`}
               alt={bookDetails.title}
               className=" object-cover rounded-md md:w-full  h-auto w-[180px] 
                relative right-[5px] bottom-2 shadow-md shadow-yellow-100 "

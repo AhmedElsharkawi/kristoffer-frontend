@@ -85,7 +85,7 @@ const BooksPage = () => {
         {currentBooks.map((book) => (
           <div className="w-[200px] border border-slate-500 rounded-md p-3 flex flex-col justify-center items-center hover:shadow-purple-400 hover:shadow-md mb-5 transition-all duration-700 ease-in-out" key={book._id}>
             <div className='flex flex-col justify-center items-center '>
-              <img src={`${process.env.REACT_APP_DOMAIN_URL}/${book.image}`} alt={book.title} className="w-[150px] h-[180px] rounded-md" />
+              <img src={`${process.env.REACT_APP_IMAGE_URL}/${book.image}`} alt={book.title} className="w-[150px] h-[180px] rounded-md" />
               <h3 className="text-center mt-1 font-semibold text-md ">
                 {book.title}
               </h3>
