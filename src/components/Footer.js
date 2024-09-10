@@ -13,7 +13,7 @@ const Footer = () => {
       setMessage(response.data.message);
       setEmail(''); // Clear the email input field after successful subscription
     } catch (error) {
-      setMessage('Error subscribing to newsletter. Please try again.');
+      setMessage(error.response.data.message);
       console.error('Error subscribing to newsletter:', error);
     }
   };
